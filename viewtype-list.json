@@ -1,0 +1,44 @@
+
+//accordion v2
+
+
+//adaptive-image-v2
+.c-adaptive-image-v2--type-a
+.c-adaptive-image-v2--type-b
+.c-adaptive-image-v2--type-c
+.c-adaptive-image-v2.type-d
+
+//accordion v2
+.accordion-v2
+.accordion-v2 .accordion-v2-panel-heading // type b
+.accordion-v2.type-c // type c
+
+.anchor-link-navigation
+.anchor-link-navigation-v2 {
+.recepedia .anchor-link-navigation-v2 
+
+.c-back-to-top-cta
+
+#shoppable_magic_v1_pdp_background {
+
+#shoppable_magic_v1_pdp_container
+
+#shoppable_magic_v1_pdp_container_x_btn
+
+.pdp_open
+
+#warningsize
+
+.article-detail {
+
+    .disable-arrow
+
+    .buy-it-now
+
+    .recipe-detail-page
+
+    .back-to-home 
+
+    .enable_secondary_nav
+
+    .hide-nutritions .call-to-action .call-to-action--type-c {

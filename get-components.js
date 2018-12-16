@@ -1,6 +1,14 @@
 const puppeteer = require('puppeteer');
 const util = require('util');
 const fs = require('fs');
+
+
+console.log(process.argv[2]);
+console.log(process.argv[3]);
+
+
+process.exit();
+
 var pageList = JSON.parse(fs.readFileSync('sites.json', 'utf8')).pages;
 
 async function run(url) {
