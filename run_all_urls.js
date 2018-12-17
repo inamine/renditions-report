@@ -12,3 +12,7 @@ localisation_list.forEach((loc) => {
     // console.log('./all-localisations/'+loc.toUpperCase()+'.csv', 'report/'+loc+'.json');
     await getComponents('./all-localisations/'+loc.toUpperCase()+'.csv', 'report/'+loc+'.json')
 })
+
+
+
+./all-localisations/uk.csv  reports/report-uk.json

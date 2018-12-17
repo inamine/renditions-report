@@ -2,10 +2,11 @@ const puppeteer = require('puppeteer');
 const util = require('util');
 const fs = require('fs');
 
-var counter = 0;
-var deep = 0;
-var lastCategory = "";
-const pass = "unileverd2uat:4nileverd%40ua%21@";
+const csv = process.argv[2];
+const reportFile = process.argv[3];
+
+var pageList = fs.readFileSync(csv, 'utf8');
+pageList = pageList.split(',').join('').split('\r\n');
 
 
 async function run(url) {
@@ -18,7 +19,12 @@ async function run(url) {
 		}
 	});
 	const page = await browser.newPage();
-	await page.goto(url);
+	try {
+		await page.goto(url);
+	} catch(e) {
+		console.log(e, "invaleu");
+	}
+	
 	var resultObject = await page.evaluate(() => {
 		var list;
 
@@ -48,18 +54,7 @@ async function run(url) {
 	return resultObject;
 };
 
-async function getComponents(csv, final) {
-	console.log(csv, final)
-	
-			
-	counter = 0;
-	deep = 0;
-	lastCategory = "";
-
-	var pages = fs.readFileSync(csv, 'utf8');
-	pages = pages.split(',').join('').split('\r\n');
-	console.log(pages);
-
+(async (pages) => {
 	var allPages = [];
 	var page = pages[0].split('/');
 	if (page[4].length === 2) {
@@ -67,28 +62,30 @@ async function getComponents(csv, final) {
 	} else {
 		deep = 4;
 	}
-	for (const page of pages) {
+	for (var page of pages) {
 		page = checkURL(page);
 		if (page) {
 			allPages.push(await run(page));
 		}
 	}
-
-	console.log(pages)
 	const json = JSON.stringify(allPages);
 	try {
-		fs.writeFile(final, json, 'utf8', () => {
-			console.log(1);
+		fs.writeFile(reportFile, json, 'utf8', () => {
+			process.exit();
 		});
 	} catch (e) {
 		console.log("couldn't write file:", e);
 	}
-};
+})(pageList);
 
+var counter = 0;
+var deep = 0;
+var lastCategory = "";
 
 
 function checkURL(url) {
 	var page = url.split('/');
+	var pass = "unileverd2uat:4nileverd%40ua%21@";
 
 	// primeiro nivel.
 	if (page.length === (deep + 1)) {
@@ -111,18 +108,3 @@ function checkURL(url) {
 		return false;
 	}
 } 
-
-
-//run throug all scripts
-
-
-// var localisation_list = ["uk","us","br","ca","au","ar","th","ph","mx","tr","id","in","de","ie","it","nl","se","be","ru","at","es","vn","py","uy","ch","tw","ng","fr"];
-var localisation_list = ["uk","us","br"];
-
-
-localisation_list.forEach((loc) => {
-    
-     getComponents('./all-localisations/'+loc.toUpperCase()+'.csv', 'report/'+loc+'.json');
-});
-
-process.exit();

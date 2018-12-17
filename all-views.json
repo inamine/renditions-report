@@ -1,0 +1,557 @@
+
+
+file >> accordion-v2/_accordion-v2-type-c.scss **
+.accordion-v2.type-c {
+
+file >> accordion-v2/_accordion-v2.scss **
+.accordion-v2 {
+
+file >> adaptive-image-v2/_adaptive-image-v2-type-a.scss **
+.adaptive-image-v2--type-a {
+
+file >> adaptive-image-v2/_adaptive-image-v2-type-b.scss **
+.adaptive-image-v2--type-b {
+
+file >> adaptive-image-v2/_adaptive-image-v2-type-c.scss **
+.adaptive-image-v2--type-c {
+
+file >> adaptive-image-v2/_adaptive-image-v2-type-d.scss **
+.adaptive-image-v2.type-d {
+
+file >> adaptive-image-v2/_adaptive-image-v2.scss **
+.adaptive-image-v2 {
+
+file >> anchor-link-navigation-v2/_anchor-link-navigation-v2.scss **
+.anchor-link-navigation-v2 {
+
+file >> anchor-link-navigation/_anchor-link-navigation.scss **
+.anchor-link-navigation {
+
+file >> back-to-top-cta/_back-to-top-cta.scss **
+.c-back-to-top-cta {
+
+file >> buy-it-now/_buy-it-now.scss **
+#shoppable_magic_v1_pdp_background {
+
+file >> call-to-action/_call-to-action-obrigado.scss **
+.obrigado & {
+button {
+
+file >> call-to-action/_call-to-action-type-a.scss **
+.call-to-action--type-a {
+
+file >> call-to-action/_call-to-action-type-b.scss **
+.call-to-action--type-b {
+
+file >> call-to-action/_call-to-action-type-c.scss **
+
+file >> call-to-action/_call-to-action-type-d.scss **
+.type-d {
+
+file >> call-to-action/_call-to-action-type-e.scss **
+.call-to-action.type-e {
+
+file >> call-to-action/_call-to-action-type-f.scss **
+&.type-f {
+
+file >> call-to-action/_call-to-action-type-g.scss **
+&.type-g {
+.container {
+./call-to-action/_call-to-action.scss **
+.call-to-action {
+.call-to-action__wrapper {
+
+file >> carousel-v2/_carousel-v2-type-a.scss **
+&--type-a {
+
+file >> carousel-v2/_carousel-v2-type-b.scss **
+&--type-b {
+
+file >> carousel-v2/_carousel-v2-type-c.scss **
+&--type-c {
+.slick-slide {
+
+file >> carousel-v2/_carousel-v2.scss **
+.c-carousel-v2 {
+.c-hero-v2__copy {
+
+file >> content-panel/_content-panel-intercept.scss **
+.intercept-popup {
+
+file >> content-panel/_content-panel-signup.scss **
+.signup-popup {
+
+file >> content-panel/_content-panel.scss **
+.o-content-wrapper {
+
+file >> country-selector/_country-selector.scss **
+.c-country-selector {
+
+file >> diagnostic-tool-question/_diagnostic-tool-question.scss **
+.diagnostic-tool-question {
+.o-text__heading-2 {
+
+file >> diagnostic-tool-question/_diagnostic-tool-sign-up.scss **
+@mixin label() {
+
+file >> diagnostic-tool-result-section/_diagnostic-tool-result-section.scss **
+.c-results-panel {
+./diagnostic-tool/_diagnostic-tool.scss **
+.c-diagnostic-tool {
+&__wrapper {
+
+file >> featured-content/_featured-content-contactus-common-q.scss **
+&.contactus-common-q {
+./featured-content/_featured-content-contactus-messageus.scss **
+&.contactus-messageus {
+./featured-content/_featured-content-type-a.scss **
+&--type-a {
+.c-featured-content-bg {
+
+file >> featured-content/_featured-content-type-b.scss **
+&--type-b {
+
+file >> featured-content/_featured-content-type-c.scss **
+&--type-c {
+&.hide-cta {
+
+./featured-content/_featured-content-type-d.scss **
+&.type.d {
+.call-to-action__link {
+
+file >> featured-content/_featured-content-type-e.scss **
+&.type.e {
+
+file >> featured-content/_featured-content-type-f.scss **
+&.type.f {
+
+file >> featured-content/_featured-content-type-g.scss **
+&.type-g {
+.c-featured-content {
+&__wrapper {
+
+file >> featured-content/_featured-content-type-h.scss **
+&.type-h {
+.c-featured-content__wrapper {
+
+file >> featured-content/_featured-content-type-i.scss **
+&.type-i {
+./featured-content/_featured-content-type-k.scss **
+&.type-k {
+.call-to-action__link {
+
+file >> featured-content/_featured-content-type-l.scss **
+&.type-l {
+.c-featured-content-bg {
+
+file >> featured-content/_featured-content-type-m.scss **
+&.type-m {
+
+file >> featured-content/_featured-content-type-n.scss **
+&.type-n {
+.c-featured-content__wrapper {
+
+file >> featured-content/_featured-content-type-o.scss **
+&.type-o {
+.c-featured-content__wrapper {
+
+file >> featured-content/_featured-content-type-p.scss **
+&.type-p {
+but without restrictions on width percentage and
+better suited for p texts on every screen resolution*/
+.c-featured-content {
+
+file >> featured-content/_featured-content.scss **
+.c-column-control--featuredcontentcolumncontainer,
+.c-column-control--featuredcontent-two-blocks {
+> div {
+
+./featured-product-v2/_featured-product-v2.scss **
+.c-featured-product-v2 {
+
+file >> form-v2/_form-v2.scss **
+.contact-page,
+.sign-up {
+.o-content-wrapper {
+
+file >> global-footer-v2/_global-footer-v2-type-a.scss **
+&--type-a {
+.c-social-container__img {
+img {
+
+file >> global-footer-v2/_global-footer-v2.scss **
+.c-global-footer-v2 {
+
+file >> global-navigation/_global-navigation.scss **
+header {
+
+file >> global-navigation/_gnav.scss **
+.o-navbar-custom-module-list.no-bg-color .o-navbar-custom-module-menu-item {
+./hero-v2/_hero-v2-type-a-US.scss **
+&.type-aa {
+.o-text__heading-1 {
+
+file >> hero-v2/_hero-v2-type-a.scss **
+&--type-a {
+.o-text__heading-1,
+
+./hero-v2/_hero-v2-type-b.scss **
+&--type-b {
+.c-hero-v2 {
+
+file >> hero-v2/_hero-v2-type-c.scss **
+&--type-c {
+.c-hero-v2__wrapper {
+
+file >> hero-v2/_hero-v2-type-d.scss **
+&.type.d {
+.c-hero-v2 {
+
+file >> hero-v2/_hero-v2-type-default.scss **
+&.type.default {
+./hero-v2/_hero-v2-type-e.scss **
+&.type.e {
+.c-hero-v2__wrapper {
+
+file >> hero-v2/_hero-v2-type-f.scss **
+&.type.f {
+.c-hero-v2 {
+
+file >> hero-v2/_hero-v2-type-g.scss **
+&.type-g {
+
+file >> hero-v2/_hero-v2-type-h.scss **
+&.type-h {
+
+file >> hero-v2/_hero-v2-type-i.scss **
+&.type-i {
+.c-hero-v2 {
+
+file >> hero-v2/_hero-v2-type-j.scss **
+&.type-j {
+
+file >> hero-v2/_hero-v2-type-k.scss **
+&.type-k {
+./hero-v2/_hero-v2-type-l.scss **
+&.type-l {
+
+file >> hero-v2/_hero-v2-type-m.scss **
+&.type-m {
+.o-text__body {
+
+file >> hero-v2/_hero-v2-type-n.scss **
+&.type-n {
+.o-text__heading-1,
+.o-text__body,
+
+file >> hero-v2/_hero-v2.scss **
+.c-hero-v2 {
+
+file >> iframe/_iframe.scss **
+.c-iframe{
+
+file >> language-selector/_language-selector.scss **
+.c-language-selector-header {
+
+file >> live-chat-v2/_live-chat-v2.scss **
+.c-live-chat-v2 {
+
+file >> multiple-related-articles/_multiple-related-articles.scss **
+.multiple-related-articles {
+./ordered-list/_ordered-list.scss **
+.ordered-list {
+
+file >> page-listing-v2/_page-listing-v2-type-a.scss **
+&--type-a {
+
+file >> page-listing-v2/_page-listing-v2-type-b.scss **
+&.type.d {
+
+file >> page-listing-v2/_page-listing-v2-type-c.scss **
+&--type-c {
+./page-listing-v2/_page-listing-v2-type-d.scss **
+&.type-d,
+&.type-g {
+
+file >> page-listing-v2/_page-listing-v2-type-e.scss **
+&.type-e {
+
+file >> page-listing-v2/_page-listing-v2-type-f.scss **
+&.type-f {
+.c-page-listing-v2-listing-item-image {
+picture {
+
+file >> page-listing-v2/_page-listing-v2-type-g.scss **
+&.type-g {
+.slick-track {
+
+./page-listing-v2/_page-listing-v2-type-h.scss **
+&.type-h {
+
+file >> page-listing-v2/_page-listing-v2-type-i.scss **
+&.type-i {
+
+file >> page-listing-v2/_page-listing-v2.scss **
+.c-page-listing-v2 {
+
+file >> partials/_partials.scss **
+/partials/_search-input.scss **
+.js-btn-search {
+
+file >> product-copy-v2/_product-copy-v2-type-a.scss **
+.c-product-copy-v2--type-a {
+&.vertical-align {
+ul li {
+
+file >> product-copy-v2/_product-copy-v2-type-b.scss **
+.c-product-copy-v2--type-b {
+.c-product-copy-v2-content {
+p {
+
+file >> product-copy-v2/_product-copy-v2-type-c.scss **
+.c-product-copy-v2--type-c {
+.c-product-copy-v2-heading {
+
+file >> product-copy-v2/_product-copy-v2-type-d.scss **
+.c-product-copy-v2 {
+&.type-d {
+.c-product-copy-v2-heading {
+.c-product-copy-v2-product-name__text {
+
+file >> product-copy-v2/_product-copy-v2-type-g.scss **
+.o-modal-open .o-modal .o-modal-content {
+
+file >> product-copy-v2/_product-copy-v2.scss **
+.column-container {
+
+./product-images/_product-images-US.scss **
+.wcmmode-edit {
+.c-column-control--product-images-component,
+.c-column-control--productsection {
+.column-container {
+
+file >> product-images/_product-images.scss **
+.product-images {
+img {
+
+file >> product-images/_zoom-modal.scss **
+.c-product-images__modal {
+
+file >> product-listing-v2/_product-listing-v2-quick-view.scss **
+&.quick-view {
+
+file >> product-listing-v2/_product-listing-v2.scss **
+.c-product-listing-v2 {
+
+file >> product-nutrients/_product-nutrients.scss **
+.product-nutrients {
+# 
+./product-rating-overview/_product-rating-overview.scss **
+.product-rating-overview {
+
+file >> quote/_quote-type-b.scss **
+.c-quote--type-b {
+
+file >> quote/_quote-type-b1.scss **
+.quote-b {
+
+file >> quote/_quote.scss **
+.c-quote--type-a {
+
+file >> recipe-attributes/_recipe-attributes.scss **
+.recipe-attributes {
+
+file >> recipe-buy-it-now/_recipe-buy-it-now.scss **
+.recipe-buy-it-now {
+.c-recipe-buy-it-now {
+
+file >> recipe-cooking-method/_recipe-cooking-method.scss **
+.recipeCookingMethodBg {
+
+file >> recipe-copy/_recipe-copy-type-a.scss **
+&--type-a {
+
+file >> recipe-copy/_recipe-copy-type-b.scss **
+&--type-b {
+
+file >> recipe-copy/_recipe-copy.scss **
+.c-column-control--recipe-nutrition-content {
+.recipeNutritionContent {
+
+file >> recipe-hero/_recipe-hero.scss **
+.c-recipe-hero {
+.c-recipe-hero-image,
+
+file >> recipe-listing/_recipe-listing-type-a.scss **
+&--type-a {
+
+file >> recipe-listing/_recipe-listing-type-b.scss **
+&--type-b {
+
+file >> recipe-listing/_recipe-listing-type-c.scss **
+&--type-c {
+ul {
+
+./recipe-listing/_recipe-listing-type-f.scss **
+.c-recipe-list-fixed {
+&.type.f {
+.c-recipe-listing__wrapper {
+
+file >> recipe-listing/_recipe-listing-type-g.scss **
+&.type-g {
+
+file >> recipe-listing/_recipe-listing.scss **
+.recipe-listing {
+
+file >> recipe-nutrients/_recipe-nutrients.scss **
+
+file >> recipe-rating-overview/_recipe-rating-overview.scss **
+.recipe-rating-overview {
+.rr-widget-container .aggregateRating {
+
+./recipe-related-products/_recipe-related-products.scss **
+.recipe-related-products {
+.c-recipe-products-carousel {
+
+file >> related-articles/_related-articles.scss **
+.related-articles {
+
+file >> related-products/_related-products.scss **
+.c-related-products-item-wrapper {
+&.slick-slide {
+
+file >> rich-text-v2/_rich-text-v2-type-a.scss **
+&--type-a {
+
+file >> rich-text-v2/_rich-text-v2-type-aa-US.scss **
+&.type-aa {
+p {
+
+file >> rich-text-v2/_rich-text-v2-type-b.scss **
+&--type-b {
+&.o-text__body {
+
+file >> rich-text-v2/_rich-text-v2-type-c.scss **
+.c-rich-text-v2--type-c {
+
+file >> rich-text-v2/_rich-text-v2-type-d.scss **
+.typed {
+.c-rich-text-v2__description {
+
+file >> rich-text-v2/_rich-text-v2-type-e.scss **
+.type-e,
+.typej {
+.container {
+
+file >> rich-text-v2/_rich-text-v2-type-f.scss **
+&.type-f {
+.container {
+
+./rich-text-v2/_rich-text-v2-type-g.scss **
+.c-rich-text-v2.type-g {
+.c-rich-text-v2__wrapper {
+
+./rich-text-v2/_rich-text-v2-type-h.scss **
+.c-rich-text-v2.type-h {
+
+file >> rich-text-v2/_rich-text-v2-type-header-search.scss **
+.search-toggle {
+
+file >> rich-text-v2/_rich-text-v2-type-i.scss **
+.c-rich-text-v2.type-i {
+
+file >> rich-text-v2/_rich-text-v2-type-j.scss **
+.c-rich-text-v2.type-j {
+
+file >> rich-text-v2/_rich-text-v2-type-k.scss **
+.c-rich-text-v2.type-k {
+
+file >> rich-text-v2/_rich-text-v2-type-l.scss **
+.c-rich-text-v2.type-l {
+./rich-text-v2/_rich-text-v2-type-m.scss **
+.c-rich-text-v2.type-m {
+
+file >> rich-text-v2/_rich-text-v2-type-n.scss **
+.type-n {
+.c-rich-text-v2__description {
+p {
+
+file >> rich-text-v2/_rich-text-v2.scss **
+.c-rich-text-v2 {
+
+file >> search-input-v2/_search-input-v2.scss **
+.tt-menu {
+
+file >> search-listing-v2/_search-listing-v2.scss **
+body {
+&.search-result-page {
+./shoppable-view-bag/_shoppable-view-bag.scss **
+.full-width {
+
+file >> sitemap/_sitemap.scss **
+.c-sitemap {
+
+file >> smart-label-v2/_smart-label-v2.scss **
+.c-smart-label-v2 {
+.c-smart-label-v2__wrapper {
+
+file >> social-sharing/_social-sharing-type-a.scss **
+.c-social-sharing {
+&--type-a {
+
+file >> social-sharing/_social-sharing-type-b.scss **
+.c-social-sharing--type-b {
+
+file >> social-sharing/_social-sharing-type-c.scss **
+.c-social-sharing--type-c {
+./social-sharing/_social-sharing-type-d.scss **
+.type-d {
+&.c-social-sharing-inline {
+
+file >> social-sharing/_social-sharing.scss **
+.social-sharing {
+.c-social-sharing-inline {
+
+file >> store-search-pdp/_store-search-pdp.scss **
+.store-search-pdp {
+
+file >> store-search-results/_store-search-results.scss **
+.c-search-store-results {
+
+file >> store-search/_store-search.scss **
+.store-search {
+
+file >> tabbed-content/_tabbed-content.scss **
+.tabbed-content {
+
+file >> tags/_tags-type-a.scss **
+&--type-a {
+
+file >> tags/_tags-type-b.scss **
+&--type-b {
+
+file >> tags/_tags.scss **
+.c-tags {
+&-sub-heading__text {
+
+file >> thank-you/_thank-you.scss **
+.c-shoppable-thanks {
+
+file >> turn-to/_turn-to.scss **
+#TTextNQA {
+
+file >> video-player-v2/_video-player-v2-type-a.scss **
+&--type-a {
+.c-video-player-v2-image {
+
+file >> video-player-v2/_video-player-v2-type-b.scss **
+&--type-b {
+./video-player-v2/_video-player-v2.scss **
+.c-column-control--videoplayercolumncontainer {
+
+file >> virtual-agent/_virtual-agent.scss **
+.virtual-agent {
+.virtual-agent-container {
+./zip-file-download/_zip-file-download.scss **
+.c-zip-file-download {
+button {
