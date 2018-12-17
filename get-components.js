@@ -1,11 +1,12 @@
 const puppeteer = require('puppeteer');
 const util = require('util');
 const fs = require('fs');
-const csv = process.argv[2];
-const reportFile = process.argv[3];
 
-var pageList = fs.readFileSync(csv, 'utf8');
-pageList = pageList.split(',').join('').split('\r\n');
+var counter = 0;
+var deep = 0;
+var lastCategory = "";
+const pass = "unileverd2uat:4nileverd%40ua%21@";
+
 
 async function run(url) {
 	console.log('>> run:', url);
@@ -47,7 +48,14 @@ async function run(url) {
 	return resultObject;
 };
 
-(async (pages) => {
+async function getComponents (csv, final) {
+	counter = 0;
+	deep = 0;
+	lastCategory = "";
+
+	var pages = fs.readFileSync(csv, 'utf8');
+	pages = pages.split(',').join('').split('\r\n');
+
 	var allPages = [];
 	var page = pages[0].split('/');
 	if (page[4].length === 2) {
@@ -63,18 +71,15 @@ async function run(url) {
 	}
 	const json = JSON.stringify(allPages);
 	try {
-		fs.writeFile('report-components.json', json, 'utf8', () => {
+		fs.writeFile(final, json, 'utf8', () => {
 			  process.exit();
 			});
 	} catch(e) {
 		console.log("couldn't write file:", e);
 	}
-})(pageList);
+};
 
-var counter = 0;
-var deep = 0;
-var lastCategory = "";
-const pass = "unileverd2uat:4nileverd%40ua%21@";
+
 
 function checkURL(url) {
 	var page = url.split('/');
