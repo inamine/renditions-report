@@ -2,13 +2,13 @@
 
 const util = require('util');
 const fs = require('fs');
-const comp = require('./get-component.js')
+const getComponents = require('./get-components.js');
 
-var localisation_list = ["uk","us","br","ca","au","ar","th","ph","mx","tr","id","in","de","ie","it","nl","se","be","ru","at","es","vn","py","uy","ch","tw","ng","fr"];
+// var localisation_list = ["uk","us","br","ca","au","ar","th","ph","mx","tr","id","in","de","ie","it","nl","se","be","ru","at","es","vn","py","uy","ch","tw","ng","fr"];
+var localisation_list = ["uk","us","br"];
 
-var cp = require('child_process');
-var n = cp.fork(__dirname + '/get-components.js');
 
 localisation_list.forEach((loc) => {
-    await comp.getComponents('./all-localisations/'+loc.toUpperCase()+'.csv', 'report/'+loc+'.json')
+    // console.log('./all-localisations/'+loc.toUpperCase()+'.csv', 'report/'+loc+'.json');
+    await getComponents('./all-localisations/'+loc.toUpperCase()+'.csv', 'report/'+loc+'.json')
 })

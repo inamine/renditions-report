@@ -33,7 +33,7 @@ async function run(url) {
 				});
 				return rObj;
 			});
-		} catch(e) {
+		} catch (e) {
 			console.log('cannot get list >>> ', e);
 		}
 		return {
@@ -48,13 +48,17 @@ async function run(url) {
 	return resultObject;
 };
 
-async function getComponents (csv, final) {
+async function getComponents(csv, final) {
+	console.log(csv, final)
+	
+			
 	counter = 0;
 	deep = 0;
 	lastCategory = "";
 
 	var pages = fs.readFileSync(csv, 'utf8');
 	pages = pages.split(',').join('').split('\r\n');
+	console.log(pages);
 
 	var allPages = [];
 	var page = pages[0].split('/');
@@ -69,12 +73,14 @@ async function getComponents (csv, final) {
 			allPages.push(await run(page));
 		}
 	}
+
+	console.log(pages)
 	const json = JSON.stringify(allPages);
 	try {
 		fs.writeFile(final, json, 'utf8', () => {
-			  process.exit();
-			});
-	} catch(e) {
+			console.log(1);
+		});
+	} catch (e) {
 		console.log("couldn't write file:", e);
 	}
 };
@@ -84,24 +90,39 @@ async function getComponents (csv, final) {
 function checkURL(url) {
 	var page = url.split('/');
 
-    // primeiro nivel.
-    if(page.length === (deep + 1)) {
-        counter = 0;
-        lastCategory = "";
-    } 
+	// primeiro nivel.
+	if (page.length === (deep + 1)) {
+		counter = 0;
+		lastCategory = "";
+	}
 
-    // repetindo a categoria - somar
-    if (lastCategory === page[page.length-2]) {
-        counter ++;
-    } else { // categoria diferente, resetar
-        lastCategory = page[page.length-2]
-        counter = 0;
-    }
-    
-    if (counter < 3) {
+	// repetindo a categoria - somar
+	if (lastCategory === page[page.length - 2]) {
+		counter++;
+	} else { // categoria diferente, resetar
+		lastCategory = page[page.length - 2]
+		counter = 0;
+	}
+
+	if (counter < 3) {
 		page[2] = pass + page[2]
 		return page.join('/');
-    } else {
-        return false;
-    }
+	} else {
+		return false;
+	}
 } 
+
+
+//run throug all scripts
+
+
+// var localisation_list = ["uk","us","br","ca","au","ar","th","ph","mx","tr","id","in","de","ie","it","nl","se","be","ru","at","es","vn","py","uy","ch","tw","ng","fr"];
+var localisation_list = ["uk","us","br"];
+
+
+localisation_list.forEach((loc) => {
+    
+     getComponents('./all-localisations/'+loc.toUpperCase()+'.csv', 'report/'+loc+'.json');
+});
+
+process.exit();
