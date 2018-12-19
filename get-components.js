@@ -22,11 +22,12 @@ async function run(url) {
 	try {
 		await page.goto(url);
 	} catch(e) {
-		console.log(e, "invaleu");
+		console.log(e, "invalid page:", url);
 	}
 	
 	var resultObject = await page.evaluate(() => {
 		var list;
+		var columnList;
 
 		try {
 			list = Array.from(document.querySelectorAll('[data-role]')).filter((node) => {
@@ -42,6 +43,26 @@ async function run(url) {
 		} catch (e) {
 			console.log('cannot get list >>> ', e);
 		}
+		try {
+			columnList = Array.from(document.querySelectorAll('div.c-column-control')).map((node) => {
+				var clist = node.classList;
+
+				if (clist.value) {
+					return {};
+				} else {
+					return {
+						"componentname": "columnControl",
+						"class": node.classList.value.replace('c-column-control','')
+					};	
+				}
+				
+			});
+		} catch (e) {
+			console.log('cannot get columnControl >>> ', e);
+		}
+
+		list = list.concat(columnList);
+
 		return {
 			url: '',
 			bodyClass: document.body.classList.value,
@@ -57,6 +78,7 @@ async function run(url) {
 (async (pages) => {
 	var allPages = [];
 	var page = pages[0].split('/');
+	// console.log("asyncPages:", page);
 	if (page[4].length === 2) {
 		deep = 5;
 	} else {
@@ -84,8 +106,13 @@ var lastCategory = "";
 
 
 function checkURL(url) {
+	// console.log("checkURL:", url);
 	var page = url.split('/');
 	var pass = "unileverd2uat:4nileverd%40ua%21@";
+
+	if (!url) {
+		return false;
+	}
 
 	// primeiro nivel.
 	if (page.length === (deep + 1)) {
