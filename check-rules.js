@@ -1,8 +1,11 @@
 const puppeteer = require('puppeteer');
 const util = require('util');
 const fs = require('fs');
-var pageList = JSON.parse(fs.readFileSync('sites.json', 'utf8')).pages;
-var cssRules = JSON.parse(fs.readFileSync('all-css.json', 'utf8'));
+const csv = process.argv[2];
+console.log(csv);
+var pageList = fs.readFileSync(csv, 'utf8').split(',').join('').split('\r\n');
+
+var cssRules = JSON.parse(fs.readFileSync('all-views.json', 'utf8'));
 
 console.log('::: total de regras >>>', cssRules.length);
 
@@ -15,18 +18,29 @@ async function run(url) {
 			height: 900
 		}
 	});
-	const page = await browser.newPage();
-	await page.goto(url);
+	
+		const page = await browser.newPage();
+	
+	try {
+		await page.goto(url);
+	} catch(e) {
+		console.log(e, 'invalid URL:', url);
+	}
+
 	cssRules = await page.evaluate((rules, clog) => {
         return rules.filter((cssRule) => {
             try {
-                return (!document.querySelector(cssRule));
+                return (!document.querySelector(cssRule.rule));
             } catch(e) {
                 // clog.log('error on rule:', cssRule, e);
             }
         });
 	}, cssRules, console);
-
+	console.log(cssRules.length, "rules to go!");
+	if (cssRules.length === 0) {
+		console.log('We found all rules!');
+		process.exit();
+	}
     await browser.close();
 };
 
@@ -37,7 +51,7 @@ async function run(url) {
 	}
 	console.log('::: total de regras ao final >>>', cssRules.length);
 	try {
-		fs.writeFile('filtered-css.json', JSON.stringify(cssRules), 'utf8', () => {
+		fs.writeFile('all-views.json', JSON.stringify(cssRules), 'utf8', () => {
 			  process.exit();
 			});
 	} catch(e) {
