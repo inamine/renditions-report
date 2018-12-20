@@ -11,6 +11,8 @@
   "dependencies": {
     "jslint": "^0.12.0",
     "log4js": "^3.0.6",
-    "puppeteer": "^1.10.0"
+    "node-fetch": "^2.3.0",
+    "puppeteer": "^1.10.0",
+    "puppeteer-cluster": "^0.12.1"
   }
 }
