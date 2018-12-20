@@ -55,22 +55,30 @@ console.log('::: total de regras >>>', cssRules.length);
     // Create a cluster with 2 workers
     const cluster = await Cluster.launch({
         concurrency: Cluster.CONCURRENCY_CONTEXT,
-        maxConcurrency: 2,
+        maxConcurrency: 8,
     });
 
     // Define a task (in this case: screenshot of page)
     await cluster.task(async ({ page, data: url }) => {
+		console.log('::: goto >> ', url.replace('https://unileverd2uat:4nileverd%40ua%21@knorrd2-uat.unileversolutions.com/', ''));
+		page.on('console', consoleObj => {
+			var txt = consoleObj.text();
+		});
+
 		await page.goto(url);
-		cssRules = await page.evaluate((rules, clog) => {
+		cssRules = await page.evaluate((rules, scope) => {
+
 			return rules.filter((cssRule) => {
+
+				console.log('::: this is a test');
 				try {
 					return (!document.querySelector(cssRule.rule));
 				} catch (e) {
-					// clog.log('error on rule:', cssRule, e);
+					console.log('::: error on rule:', cssRule, e);
 				}
 			});
-		}, cssRules, console);
-		console.log(url);
+		}, cssRules, this);
+
 		console.log('::: total de regras >>>', cssRules.length);
 		console.log('---------')
 
@@ -80,8 +88,9 @@ console.log('::: total de regras >>>', cssRules.length);
     });
 
 	// Add pages to queue
-	pageList.forEach(async (page)=>{
-		await cluster.queue(page);
+	pageList.forEach(async (url)=>{
+		url = url.replace('https://', 'https://unileverd2uat:4nileverd%40ua%21@');
+		await cluster.queue(url);
 	});
 
     // Shutdown after everything is done
