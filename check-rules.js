@@ -81,6 +81,11 @@ console.log('::: total de regras >>>', cssRules.length);
 
 		console.log('::: total de regras >>>', cssRules.length);
 		console.log('---------')
+		try {
+			fs.writeFile('all-views-final.json', JSON.stringify(cssRules), 'utf8', () => {});
+		} catch(e) {
+			console.log("couldn't write file:", e);
+		}
 
         // const path = url.replace(/[^a-zA-Z]/g, '_') + '.png';
         // await page.screenshot({ path });
